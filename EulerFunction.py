@@ -1,0 +1,3 @@
+class EulerFunction(object):
+    pass
+

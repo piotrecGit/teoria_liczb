@@ -1,0 +1,3 @@
+class Factorization(object):
+    pass
+
