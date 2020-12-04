@@ -21,8 +21,6 @@ class FilesSystemConfig:
 class ProjectRequirements:
     def __init__(self):
         config.read(os.getcwd() + "/config.ini")
-        self.required_texts = int(config['PROJECT_REQUIREMENTS']['required_texts'])
-        self.required_texts_samples = int(config['PROJECT_REQUIREMENTS']['required_texts_samples'])
 
 
 class GeneralConfig:

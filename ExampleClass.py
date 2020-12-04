@@ -2,7 +2,6 @@ import datetime
 
 from flask import request
 from flask_restful import Resource
-from sqlalchemy.sql.functions import count, min
 from ApiResponse import ApiResponse
 from Config import ProjectRequirements
 from HashFunctions import HashFunctions
@@ -12,8 +11,8 @@ project_requirements = ProjectRequirements()
 
 
 class ExampleClass(Resource):
-    def get(self, merchant_id, user_id, text_id):
-            response_object = ApiResponse(404, 1, "Error, there is no samples for given data!", {})
+    def get(self):
+            response_object = ApiResponse(200, 0, "hello", {})
             return response_object.response
 
     def post(self):
