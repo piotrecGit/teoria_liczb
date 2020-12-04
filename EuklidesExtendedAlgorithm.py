@@ -1,22 +1,33 @@
-from flask import render_template, make_response
+from flask import render_template, make_response, request
 from flask_restful import Resource
+from flask_wtf import FlaskForm, form
+from wtforms import StringField, TextField, SubmitField
+from wtforms.validators import DataRequired, Length
+from Forms import EuklidesForm
+
 
 class EuklidesExtendedAlgorithm(Resource):
+
     def get(self):
-
-
-
         headers = {'Content-Type': 'text/html'}
-        return make_response(render_template("home.html"))
+        myForm = EuklidesForm()
+        return make_response(render_template("euklides_extended_algorithm.html", form=myForm))
 
 # Rozszerzony  algorytm  Euklidesa
 # wynikiem sa trzy liczby :  [ r ,  p ,  q ]
 # takie, ze: NWD(a, b) = r = p*a + q*b
 
+    def post(self):
+        a = int(request.form['a'])
+        b = int(request.form['b'])
+        result = self.rozszerzony_euklides(a, b)
+        headers = {'Content-Type': 'text/html'}
+        myForm = EuklidesForm()
+        return make_response(render_template("euklides_extended_algorithm.html", form=myForm))
 
-    def rozszerzony_euklides(a, b):
+    def rozszerzony_euklides(self, a, b):
 
-        # assert a != 0, "Liczba a nie może być zerem."
+        assert a != 0, "Liczba a nie może być zerem."
         assert b != 0, "Liczba b nie może być zerem."
         old_b = b
         pa = 1

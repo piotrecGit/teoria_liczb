@@ -1,0 +1,18 @@
+{%extends "base_bootstrap.html" %}
+
+{% block content %}
+<div class="formwrapper">
+  <h2 class="title">Rozszerzony algorytm Euklidesa</h2>
+  <form method="POST">
+      <div class="form-field">
+          {{ form.a.label }}
+          {{ form.a }}
+      </div>
+      <div class="form-field">
+          {{ form.b.label }}
+          {{ form.b }}
+      </div>
+      {{ form.submit }}
+  </form>
+</div>
+{% endblock %}

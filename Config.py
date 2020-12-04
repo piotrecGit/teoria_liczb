@@ -27,5 +27,5 @@ class GeneralConfig:
     def __init__(self):
         config.read(os.getcwd() + "/config.ini")
         self.max_bytes_upload_size = int(config['APP_CONFIG']['max_bytes_upload_size'])
-
+        self.secret_key = os.urandom(32)
 
