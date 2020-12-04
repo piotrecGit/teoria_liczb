@@ -1,3 +1,0 @@
-class EuklidesExtendedAlghoritm(object):
-    pass
-

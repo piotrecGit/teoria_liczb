@@ -1,6 +1,6 @@
 from AdditionalFunctions import AdditionalFunctions
 from Config import GeneralConfig
-from EuklidesExtendedAlghoritm import EuklidesExtendedAlghoritm
+from EuklidesExtendedAlgorithm import EuklidesExtendedAlgorithm
 from EulerFunction import EulerFunction
 from ExampleClass import ExampleClass
 from Factorization import Factorization
@@ -30,7 +30,7 @@ api.add_resource(PrimeNumbers, '/prime_numbers', endpoint='prime_numbers')
 api.add_resource(FermatTest, '/fermat_test', endpoint='fermat_test')
 api.add_resource(Factorization, '/factorization', endpoint='factorization')
 api.add_resource(EulerFunction, '/euler_function', endpoint='euler_function')
-api.add_resource(EuklidesExtendedAlghoritm, '/euklides_extended_alghoritm', endpoint='euklides_extended_alghoritm')
+api.add_resource(EuklidesExtendedAlgorithm, '/euklides_extended_alghoritm', endpoint='euklides_extended_alghoritm')
 api.add_resource(RSAKeysPairGenerate, '/rsa_keys_pair_generate', endpoint='rsa_keys_pair_generate')
 api.add_resource(RSAEncrypt, '/rsa_encrypt', endpoint='rsa_encrypt')
 api.add_resource(RSADecrypt, '/rsa_decrypt', endpoint='rsa_decrypt')
