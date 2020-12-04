@@ -1,4 +1,4 @@
-from numbersTheoryApi import app
+from APIMain import app
 
 if __name__ == "__main__":
     app.run()

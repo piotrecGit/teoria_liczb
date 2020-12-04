@@ -9,7 +9,7 @@ from FilesTransportApi import FilesTransportApi
 from flask import Flask
 from flask_restful import Api
 from HashFunctions import HashFunctions
-from HomeApi import Home
+from Home import Home
 from PrimeNumbers import PrimeNumbers
 from RSADecrypt import RSADecrypt
 from RSAEncrypt import RSAEncrypt

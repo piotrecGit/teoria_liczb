@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="api classes skeleton created">
-      <change beforePath="$PROJECT_DIR$/RSAKeysPairGererate.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSAKeysPairGenerate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbersTheoryApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/numbersTheoryApi.py" afterDir="false" />
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="bad name of class corrected">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EulerFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/EulerFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Factorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Factorization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FermatTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FermatTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimeNumbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrimeNumbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RSADecrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSADecrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RSAEncrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSAEncrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RSAKeysPairGenerate.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSAKeysPairGenerate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbersTheoryApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIMain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +59,29 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.numbersTheoryApi">
+  <component name="RunManager" selected="Python.APIMain">
+    <configuration name="APIMain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="teoria_liczb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/APIMain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="teoria_liczb" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,31 +104,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="numbersTheoryApi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="teoria_liczb" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/numbersTheoryApi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.numbersTheoryApi" />
+        <item itemvalue="Python.APIMain" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607037262588</updated>
-      <workItem from="1607037263644" duration="11292000" />
+      <workItem from="1607037263644" duration="13624000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -138,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607048208520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bad name of class corrected">
+      <created>1607048705815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607048705815</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bad name of class corrected">
+      <created>1607048874774</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607048874774</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,10 +190,11 @@
     <MESSAGE value="all initial files added" />
     <MESSAGE value="skeleton created" />
     <MESSAGE value="api classes skeleton created" />
-    <option name="LAST_COMMIT_MESSAGE" value="api classes skeleton created" />
+    <MESSAGE value="bad name of class corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="bad name of class corrected" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/teoria_liczb$main.coverage" NAME="main Coverage Results" MODIFIED="1607039219253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/teoria_liczb$numbersTheoryApi.coverage" NAME="numbersTheoryApi Coverage Results" MODIFIED="1607046625941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/teoria_liczb$numbersTheoryApi.coverage" NAME="APIMain Coverage Results" MODIFIED="1607049006377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
