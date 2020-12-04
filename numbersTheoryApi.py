@@ -13,7 +13,7 @@ from HomeApi import Home
 from PrimeNumbers import PrimeNumbers
 from RSADecrypt import RSADecrypt
 from RSAEncrypt import RSAEncrypt
-from RSAKeysPairGererate import RSAKeysPairGererate
+from RSAKeysPairGenerate import RSAKeysPairGenerate
 
 """Start configuration"""
 app = Flask(__name__)
@@ -31,7 +31,7 @@ api.add_resource(FermatTest, '/fermat_test', endpoint='fermat_test')
 api.add_resource(Factorization, '/factorization', endpoint='factorization')
 api.add_resource(EulerFunction, '/euler_function', endpoint='euler_function')
 api.add_resource(EuklidesExtendedAlghoritm, '/euklides_extended_alghoritm', endpoint='euklides_extended_alghoritm')
-api.add_resource(RSAKeysPairGererate, '/rsa_keys_pair_generate', endpoint='rsa_keys_pair_generate')
+api.add_resource(RSAKeysPairGenerate, '/rsa_keys_pair_generate', endpoint='rsa_keys_pair_generate')
 api.add_resource(RSAEncrypt, '/rsa_encrypt', endpoint='rsa_encrypt')
 api.add_resource(RSADecrypt, '/rsa_decrypt', endpoint='rsa_decrypt')
 api.add_resource(FilesTransportApi, '/file/download/<path:file_name>', endpoint='file_download')
