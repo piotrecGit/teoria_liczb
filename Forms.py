@@ -1,12 +1,11 @@
 from flask_wtf import FlaskForm, RecaptchaField
-from wtforms import StringField, IntegerField, SubmitField
-from wtforms.validators import DataRequired, Length, Email
-
+from wtforms import StringField, IntegerField, SubmitField, validators
+from wtforms.validators import *
 
 class EuklidesForm(FlaskForm):
     """Contact form."""
-    a = IntegerField('Liczba a', [DataRequired()])
-    b = IntegerField('Liczba b', [DataRequired()])
+    a = IntegerField('Liczba a')
+    b = IntegerField('Liczba b')
     submit = SubmitField('Oblicz')
 
 
