@@ -49,7 +49,7 @@
 
     </div>
 
-    {% if data["sign"] < 0 %}
+    {% if data["sign"] < 0 and data["a"] == 1 %}
         <div style="width: 40%; height: auto; overflow-wrap: break-word;" class="alert alert-warning">
             Uwaga ponieważ wartość pa na wyjściu była ujemna dodano do niej wartość b aby wynik nie był ujemny
         </div>
