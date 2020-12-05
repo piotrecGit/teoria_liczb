@@ -1,9 +1,5 @@
 from flask import render_template, make_response, request
 from flask_restful import Resource
-from flask_restful import reqparse
-from flask_wtf import FlaskForm, form
-from wtforms import StringField, TextField, SubmitField
-from wtforms.validators import DataRequired, Length
 from Forms import EuklidesForm
 
 

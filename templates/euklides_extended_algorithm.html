@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<div class="align-items-center" style="min-width: 700px;width: 50%; margin-left: auto; margin-right:auto; height: 100%; background-color: #efefef; text-align: center; padding: 10px 10% 10px 10%;">
+<div class="align-items-center" style="min-width: 700px;width: 50%; margin-left: auto; margin-right:auto; min-height: 100%; background-color: #efefef; text-align: center; padding: 10px 10% 10px 10%;">
+
+  {% include "_homepage_link.html"%}
+
   <h2 class="title">Rozszerzony algorytm Euklidesa</h2>
     <br>
     <div style="text-align: left;">
@@ -37,6 +40,14 @@
 
 <br>
 {% if data is defined %}
+    {% if data["sign"] < 0 and data["a"] == 1 %}
+        <div style="height: auto; overflow-wrap: break-word;" class="alert alert-warning">
+            <div style="text-align: left;">
+                Uwaga ponieważ wartość pa na wyjściu była ujemna dodano do niej wartość b aby wynik nie był ujemny
+            </div>
+        </div>
+    {% endif %}
+
     <div style="height: auto; overflow-wrap: break-word;" class="alert alert-primary">
         {% if data["a"] == 1 %}
             <div style="text-align: left;">
@@ -51,13 +62,6 @@
         {% endif %}
     </div>
 
-    {% if data["sign"] < 0 and data["a"] == 1 %}
-        <div style="height: auto; overflow-wrap: break-word;" class="alert alert-warning">
-            <div style="text-align: left;">
-                Uwaga ponieważ wartość pa na wyjściu była ujemna dodano do niej wartość b aby wynik nie był ujemny
-            </div>
-        </div>
-    {% endif %}
 
     {% endif %}
 

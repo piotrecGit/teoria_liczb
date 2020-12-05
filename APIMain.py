@@ -42,4 +42,4 @@ api.add_resource(ExampleClass, '/samples', endpoint='samples_get')
 api.add_resource(ExampleClass, '/sample/add', endpoint='sample_add')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(debug=app_config.debug_mode, host='0.0.0.0')
