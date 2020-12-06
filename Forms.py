@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm, RecaptchaField
-from wtforms import StringField, IntegerField, SubmitField
+from wtforms import IntegerField, SubmitField
 from wtforms.validators import *
 
 
@@ -16,13 +16,18 @@ class PrimesForm(FlaskForm):
 
 
 class FactorizationForm(FlaskForm):
-    liczba = IntegerField('Liczba:', [NumberRange(min=2, message='Liczba musi być większa od 1')])
+    liczba = IntegerField('Liczba:', [NumberRange(min=2, max=2000099990, message='Liczba musi być większa od 1 i mniejsza od 2000099991')])
     submit = SubmitField('Rozłóż na czynniki pierwsze')
 
 
 class FermatTestForm(FlaskForm):
     liczba = IntegerField('Liczba:', [NumberRange(min=2, message='Liczba musi być większa od 1')])
     dokladnosc = IntegerField('Dokładność testu (od 1 do ...):', [NumberRange(min=1, message='Liczba musi być większa od 0')])
-    submit = SubmitField('Rozłóż na czynniki pierwsze')
+    submit = SubmitField('Wykonaj Test')
+
+
+class EulerFunctionForm(FlaskForm):
+    liczba = IntegerField('Liczba:', [NumberRange(min=2, message='Liczba musi być większa od 1')])
+    submit = SubmitField('Oblicz')
 
 

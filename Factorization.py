@@ -31,24 +31,18 @@ class Factorization(Resource):
                     for i in result:
                         result_string += (str(i) + "*")
                     result_string = result_string.rstrip('*')
-                    result_string += "<br>Czas wykonywania obliczeń wyniósł: " + computation_time.__str__() + " sekundy"
+                    result_string += "<br>Czas wykonywania obliczeń wyniósł: " + round(computation_time, 6).__str__() + " sekundy"
             else:
-                result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba " + liczba.__str__() + " jest to liczba pierwsza."
+                result_string = "Liczby <strong>" + liczba.__str__() + "</strong> nie da się rozłożyć na czynniki pierwsze ponieważ jest to liczba pierwsza."
 
-            response = make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
-            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-            response.headers['Cache-Control'] = 'public, max-age=0'
-            return response
+            return make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
         else:
             print(myForm.errors)
             for key in myForm.errors:
                 for value in myForm.errors[key]:
                     errors_string += "<li>" + key + ":  " + value + "</li>"
 
-            response = make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
-            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-            response.headers['Cache-Control'] = 'public, max-age=0'
-            return response
+            return make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
 
     def factorization(self, n):
         array_of_factors = []

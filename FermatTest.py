@@ -28,7 +28,7 @@ class FermatTest(Resource):
             start_time = time.time()
             fermat_result = self.fermat_prime_test(liczba, dokladnosc)
             computation_time = (time.time() - start_time)
-            fermat_result += "<br>Czas wykonywania obliczeń wyniósł: " + computation_time.__str__() + " sekundy"
+            fermat_result += "<br>Czas wykonywania obliczeń wyniósł: " + round(computation_time, 6).__str__() + " sekundy"
             response = make_response(render_template("fermat_test.html", form=myForm, data = fermat_result))
             response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
             response.headers['Cache-Control'] = 'public, max-age=0'

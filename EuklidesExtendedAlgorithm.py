@@ -1,3 +1,5 @@
+import time
+
 from flask import render_template, make_response, request
 from flask_restful import Resource
 from Forms import EuklidesForm
@@ -25,8 +27,11 @@ class EuklidesExtendedAlgorithm(Resource):
 
             a = int(request.form['a'])
             b = int(request.form['b'])
+
+            start_time = time.time()
             result = self.rozszerzony_euklides(a, b)
-            response = make_response(render_template("euklides_extended_algorithm.html", form=myForm, data=result))
+            computation_time = (time.time() - start_time)
+            response = make_response(render_template("euklides_extended_algorithm.html", form=myForm, data=result, computation_time=round(computation_time, 6)))
             response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
             response.headers['Cache-Control'] = 'public, max-age=0'
             return response

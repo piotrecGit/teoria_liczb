@@ -27,7 +27,7 @@ class PrimeNumbers(Resource):
             result = self.prime_numbers(a, b)
             computation_time = (time.time() - start_time)
 
-            return make_response(render_template("prime_numbers.html", form=myForm, data=result, exchange=exchange, computation_time=computation_time))
+            return make_response(render_template("prime_numbers.html", form=myForm, data=result, exchange=exchange, computation_time=round(computation_time, 6)))
         else:
             print(myForm.errors)
             for key in myForm.errors:

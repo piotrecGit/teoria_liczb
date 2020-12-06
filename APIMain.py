@@ -1,4 +1,3 @@
-from AdditionalFunctions import AdditionalFunctions
 from Config import GeneralConfig
 from EuklidesExtendedAlgorithm import EuklidesExtendedAlgorithm
 from EulerFunction import EulerFunction
@@ -19,8 +18,6 @@ app_config = GeneralConfig()
 app.config["SECRET_KEY"] = app_config.secret_key
 
 api = Api(app)
-"""Helpers"""
-AdditionalFunctions = AdditionalFunctions()
 
 """Api methods"""
 api.add_resource(Home, '/', endpoint='home')
