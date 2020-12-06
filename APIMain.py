@@ -16,7 +16,7 @@ from RSAKeysPairGenerate import RSAKeysPairGenerate
 """Start configuration"""
 app = Flask(__name__)
 app_config = GeneralConfig()
-app.config["secret_key"] = app_config.secret_key
+app.config["SECRET_KEY"] = app_config.secret_key
 
 api = Api(app)
 """Helpers"""

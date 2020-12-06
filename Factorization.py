@@ -35,7 +35,7 @@ class Factorization(Resource):
             else:
                 result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba " + liczba.__str__() + " jest to liczba pierwsza."
 
-            response = make_response(render_template("factorization.html", data=result_string, liczba=liczba))
+            response = make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
             response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
             response.headers['Cache-Control'] = 'public, max-age=0'
             return response
