@@ -46,7 +46,7 @@ class FermatTest(Resource):
                 result_string = "Liczba p = <strong>" + p.__str__() + "</strong> nie jest pierwsza<br><br>" + result_string
                 return result_string
                 break
-        result_string = "Liczba p = <strong>" + p.__str__() + "</strong> prawdopodobnie jest pierwsza<br><br>" + result_string
+        result_string = "Liczba p = <strong>" + p.__str__() + "</strong> jest prawdopodobnie pierwsza<br><br>" + result_string
         return result_string
 
     def losowanie(self, liczba):
