@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="minor correction">
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimeNumbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrimeNumbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/prime_numbers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prime_numbers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,7 @@
       <updated>1607037262588</updated>
       <workItem from="1607037263644" duration="16527000" />
       <workItem from="1607086335078" duration="89580000" />
-      <workItem from="1607258457978" duration="13703000" />
+      <workItem from="1607258457978" duration="14363000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -307,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607274850416</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="make secret key constant">
+      <created>1607278900995</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607278900995</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test">
+      <created>1607279123177</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607279123177</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +358,6 @@
     <MESSAGE value="debug mode on" />
     <MESSAGE value="debug mode off" />
     <MESSAGE value="style change" />
-    <MESSAGE value="test" />
     <MESSAGE value="prime numbers added" />
     <MESSAGE value="minor change" />
     <MESSAGE value="factorization added" />
@@ -352,10 +367,12 @@
     <MESSAGE value="header for no caching added" />
     <MESSAGE value="useless calssses and files removed" />
     <MESSAGE value="minor correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor correction" />
+    <MESSAGE value="make secret key constant" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607273939141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607279464479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$main.coverage" NAME="main Coverage Results" MODIFIED="1607039219253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$numbersTheoryApi.coverage" NAME="APIMain Coverage Results" MODIFIED="1607086027975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

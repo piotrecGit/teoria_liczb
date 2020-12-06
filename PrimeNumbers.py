@@ -1,3 +1,4 @@
+import time
 from math import sqrt, floor
 from flask import render_template, make_response, request
 from flask_restful import Resource
@@ -22,8 +23,11 @@ class PrimeNumbers(Resource):
                 a, b = b, a
                 exchange = True
 
+            start_time = time.time()
             result = self.prime_numbers(a, b)
-            return make_response(render_template("prime_numbers.html", form=myForm, data=result, exchange=exchange))
+            computation_time = (time.time() - start_time)
+
+            return make_response(render_template("prime_numbers.html", form=myForm, data=result, exchange=exchange, computation_time=computation_time))
         else:
             print(myForm.errors)
             for key in myForm.errors:

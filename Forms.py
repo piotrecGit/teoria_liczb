@@ -10,8 +10,8 @@ class EuklidesForm(FlaskForm):
 
 
 class PrimesForm(FlaskForm):
-    od = IntegerField('Zakres od (min. 1999900000):')#, [NumberRange(min=1999900000, max=2000099990, message='Liczba "od" jest spoza zakresu <1999900000, 2000099990>')])
-    do = IntegerField('Zakres do (max. 2000099990):')#, [NumberRange(min=1999900000, max=2000099990, message='Liczba "do" jest spoza zakresu <1999900000, 2000099990>')])
+    od = IntegerField('Zakres od (min. 1999900000):', [NumberRange(min=1999900000, max=2000099990, message='Liczba "od" jest spoza zakresu <1999900000, 2000099990>')])
+    do = IntegerField('Zakres do (max. 2000099990):', [NumberRange(min=1999900000, max=2000099990, message='Liczba "do" jest spoza zakresu <1999900000, 2000099990>')])
     submit = SubmitField('Znajdź liczby pierwsze')
 
 
