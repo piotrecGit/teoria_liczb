@@ -21,8 +21,8 @@ class Factorization(Resource):
             prime = PrimeNumbers
             if not prime.if_prime(self, liczba):
                 start_time = time.time()
+                # print(type(self.factorization(liczba)))
                 result = self.factorization(liczba)
-                print(result)
                 computation_time = (time.time() - start_time)
                 if len(result) > 1:
                     result_string = liczba.__str__() + " = "
@@ -42,44 +42,51 @@ class Factorization(Resource):
 
             return make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
 
-    def algorithm (self, p, factors):
-        p = int(p)
-        x = ceil(sqrt(p))
-        print("hello")
-
-        while True:
-            z = int((x * x) - p)
-            y = floor(sqrt(z))
-
-            if z == (y * y):
-                m = x + y
-                n = x - y
-                print(x, y, z, m, n, p)
-                if n == 1:
-                    print("break1 n=1")
+    def factorization(self, n):
+        array_of_factors = []
+        while n > 1:
+            for i in range(2, int(n) + 1):
+                if n % i == 0:
+                    n /= i
+                    array_of_factors.append(i)
                     break
+        return array_of_factors
 
-                self.algorithm(m, factors)
-                self.algorithm(n, factors)
-                return
-            x += 1
-            if (x + y) < p:
-                print("break2 x:" + x.__str__() + " y: " + y.__str__() + " p: " + p.__str__())
-                
-        factors.append(p)
-        print(p)
-
-
-    def factorization(self, p):
-
-        p = int(p)
-        factors = []
-        while (p % 2) == 0:
-            p /= 2
-            factors.append(2)
-        if p > 1:
-            self.algorithm(p, factors)
-        return factors
+    # def algorithm(self, p, factors):
+    #     p = int(p)
+    #     x = ceil(sqrt(p))
+    #
+    #     while True:
+    #         z = int((x * x) - p)
+    #         y = floor(sqrt(z))
+    #
+    #         if z == (y * y):
+    #             m = x + y
+    #             n = x - y
+    #             print(x, y, z, m, n, p)
+    #             if n == 1:
+    #                 print("break1 n=1")
+    #                 break
+    #
+    #             self.algorithm(m, factors)
+    #             self.algorithm(n, factors)
+    #             return
+    #         x += 1
+    #         if (x + y) < p:
+    #             print("break2 x:" + x.__str__() + " y: " + y.__str__() + " p: " + p.__str__())
+    #
+    #     factors.append(p)
+    #
+    # def factorization_younger(self, p):
+    #
+    #     p = int(p)
+    #     factors = []
+    #     while (p % 2) == 0:
+    #         p /= 2
+    #         factors.append(2)
+    #     if p > 1:
+    #         self.algorithm(p, factors)
+    #     return factors
 
     def factorization_old(self, input_a):
         current_number = input_a
