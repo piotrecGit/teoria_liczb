@@ -1,6 +1,62 @@
+import time
+from math import sqrt, floor
+from flask import render_template, make_response, request
 from flask_restful import Resource
-
+from Forms import FactorizationForm
+from PrimeNumbers import PrimeNumbers
 
 class Factorization(Resource):
-    pass
+    def get(self):
+        myForm = FactorizationForm()
+        return make_response(render_template("factorization.html", form=myForm))
+
+
+    def post(self):
+        myForm = FactorizationForm(request.form)
+        errors_string = ""
+        if myForm.validate():
+            liczba = int(request.form['liczba'])
+            start_time = time.time()
+            result = self.factorization(liczba)
+            computation_time = (time.time() - start_time)
+            if len(result) > 1:
+                result_string = liczba.__str__() + " = "
+                for i in result:
+                    result_string += (str(i) + "*")
+                result_string = result_string.rstrip('*')
+                result_string += "<br>Czas wykonywania obliczeń wyniósł: " + computation_time.__str__() + " sekundy"
+            else:
+                result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba jest to pierwsza."
+
+            return make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
+        else:
+            print(myForm.errors)
+            for key in myForm.errors:
+                for value in myForm.errors[key]:
+                    errors_string += "<li>" + key + ":  " + value + "</li>"
+
+            return make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
+
+
+
+
+    def factorization(self, input_a):
+        current_number = input_a
+        factors = []
+        prime = PrimeNumbers()
+        while current_number > 1:
+            # print("current: " + current_number.__str__())
+            prime_nums = prime.prime_numbers(2, floor(current_number/2))
+            for i in prime_nums:
+                # print(current_number.__str__() + " / " + str(i))
+                if i >= floor(current_number/2):
+                    i = current_number
+                multiple = divmod(current_number, i)[0]
+                remainder = divmod(current_number, i)[1]
+                if remainder == 0:
+                    factors.append(i)
+                    break
+            current_number = multiple
+
+        return factors
 

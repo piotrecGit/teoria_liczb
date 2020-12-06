@@ -1,8 +1,7 @@
 from math import sqrt, floor
-
 from flask import render_template, make_response, request
 from flask_restful import Resource
-from Forms import EuklidesForm, PrimesForm
+from Forms import PrimesForm
 
 
 class PrimeNumbers(Resource):
@@ -35,42 +34,22 @@ class PrimeNumbers(Resource):
 
     def prime_numbers(self, input_a, input_b):
         current_number = input_a
-        prime_numbers = []
+        prime_numbers_arr = []
         while current_number <= input_b:
             test_result = self.if_prime(current_number)
             if test_result:
-                prime_numbers.append(current_number)
+                prime_numbers_arr.append(current_number)
             current_number += 1
-        print(prime_numbers)
-
-        #     an_item = dict(counter=counter, a=a, b=b, pa=pa, old_pa=old_pa, qa=qa, old_qa=old_qa, pb=pb, qb=qb)
-        #     items.append(an_item)
-        #
-        #     wielokrotnosc = divmod(a, b)[0]
-        #     reszta = divmod(a, b)[1]
-        #     old_pa = pa
-        #     old_qa = qa
-        #     a = b
-        #     b = reszta
-        #     pa = pb
-        #     qa = qb
-        #     pb = old_pa - wielokrotnosc * pb
-        #     qb = old_qa - wielokrotnosc * qb
-        #
-        # an_item = dict(counter="Na wyjściu", a=a, b=b, pa=pa, old_pa=old_pa, qa=qa, old_qa=old_qa, pb=pb, qb=qb)
-        # items.append(an_item)
-
-        return prime_numbers
+        return prime_numbers_arr
 
     def if_prime(self, number):
 
-        prime = True
-        for i in range(2, floor(sqrt(number))):
+        found = False
+        for i in range(2, floor(sqrt(number))+1):
             if divmod(number, i)[1] == 0:
-                prime = False
+                found = True
                 break
-
-        return prime
+        return not found
 
 
 

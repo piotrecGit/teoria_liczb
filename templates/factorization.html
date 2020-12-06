@@ -1,0 +1,51 @@
+{%extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<div class="align-items-center" style="min-width: 700px;width: 50%; margin-left: auto; margin-right:auto; min-height: 100%; background-color: #efefef; text-align: center; padding: 10px 10% 10px 10%;">
+
+  {% include "_homepage_link.html"%}
+
+  <h2 class="title">Rozkład na czynniki pierwsze</h2>
+    <br>
+    <div style="text-align: center;">
+        Program sprawdzi jakie są czynniki pierwsze podanej liczby.
+        <br>
+        <br>
+    </div>
+
+  <form style="width: 50%;margin-left: auto; margin-right: auto;" method="POST">
+      {{ form.csrf_token }}
+      <div class="form-group">
+          {{ form.liczba.label }}
+          {{ form.liczba(class="form-control") }}
+
+      </div>
+      <br>
+      <div class="form-group text-center">
+          {{ form.submit(class="btn btn-primary") }}
+      </div>
+  </form>
+<br>
+    {% if occured_errors is defined %}
+        <div style="; height: auto; overflow-wrap: break-word;" class="alert alert-danger">
+            <div style="text-align: left;">{{occured_errors | safe}}</div>
+        </div>
+    {% endif %}
+
+<br>
+{% if data is defined %}
+
+    <div style="height: auto; overflow-wrap: break-word;" class="alert alert-primary">
+            <div style="text-align: left;">
+                {{data | safe}}
+            </div>
+    </div>
+
+{% endif %}
+
+    <br>
+
+
+</div>
+{% endblock %}
