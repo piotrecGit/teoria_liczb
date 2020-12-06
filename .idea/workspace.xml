@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="factorization correction">
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="small correction">
+      <change afterPath="$PROJECT_DIR$/templates/fermat_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Factorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Factorization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FermatTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FermatTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +112,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607037262588</updated>
       <workItem from="1607037263644" duration="16527000" />
-      <workItem from="1607086335078" duration="88722000" />
+      <workItem from="1607086335078" duration="89580000" />
+      <workItem from="1607258457978" duration="8672000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -251,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607232630039</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="factorization correction">
+      <created>1607237835586</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607237835586</updated>
+    </task>
+    <task id="LOCAL-00022" summary="small correction">
+      <created>1607238712363</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1607238712363</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,10 +309,11 @@
     <MESSAGE value="minor change" />
     <MESSAGE value="factorization added" />
     <MESSAGE value="factorization correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="factorization correction" />
+    <MESSAGE value="small correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="small correction" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607235974906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607266732503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$main.coverage" NAME="main Coverage Results" MODIFIED="1607039219253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$numbersTheoryApi.coverage" NAME="APIMain Coverage Results" MODIFIED="1607086027975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
