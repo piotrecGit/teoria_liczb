@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="small correction">
-      <change beforePath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleClass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Factorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Factorization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FermatTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FermatTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesTransportApi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HashFunctions.py" beforeDir="false" />
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="useless calssses and files removed">
       <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +109,7 @@
       <updated>1607037262588</updated>
       <workItem from="1607037263644" duration="16527000" />
       <workItem from="1607086335078" duration="89580000" />
-      <workItem from="1607258457978" duration="11889000" />
+      <workItem from="1607258457978" duration="12308000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -292,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607267743414</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="header for no caching added">
+      <created>1607274432067</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607274432067</updated>
+    </task>
+    <task id="LOCAL-00027" summary="useless calssses and files removed">
+      <created>1607274690790</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607274690790</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +342,9 @@
     <MESSAGE value="factorization correction" />
     <MESSAGE value="fermat test added" />
     <MESSAGE value="small correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="small correction" />
+    <MESSAGE value="header for no caching added" />
+    <MESSAGE value="useless calssses and files removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="useless calssses and files removed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607273939141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
