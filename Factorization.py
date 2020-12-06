@@ -31,7 +31,7 @@ class Factorization(Resource):
                     result_string = result_string.rstrip('*')
                     result_string += "<br>Czas wykonywania obliczeń wyniósł: " + computation_time.__str__() + " sekundy"
             else:
-                result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba jest to pierwsza."
+                result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba " + liczba.__str__() + " jest to liczba pierwsza."
 
             return make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
         else:
