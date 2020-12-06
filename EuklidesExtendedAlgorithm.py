@@ -8,7 +8,11 @@ class EuklidesExtendedAlgorithm(Resource):
 
     def get(self):
         myForm = EuklidesForm()
-        return make_response(render_template("euklides_extended_algorithm.html", form=myForm))
+        response=make_response(render_template("euklides_extended_algorithm.html", form=myForm))
+        response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+        response.headers['Cache-Control'] = 'public, max-age=0'
+
+        return response
 
 # Rozszerzony  algorytm  Euklidesa
 # wynikiem sa trzy liczby :  [ r ,  p ,  q ]
@@ -22,14 +26,21 @@ class EuklidesExtendedAlgorithm(Resource):
             a = int(request.form['a'])
             b = int(request.form['b'])
             result = self.rozszerzony_euklides(a, b)
-            return make_response(render_template("euklides_extended_algorithm.html", form=myForm, data=result))
+            response = make_response(render_template("euklides_extended_algorithm.html", form=myForm, data=result))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
+
         else:
             print(myForm.errors)
             for key in myForm.errors:
                 for value in myForm.errors[key]:
                     errors_string += "<li>" + key + ":  " + value + "</li>"
 
-            return make_response(render_template("euklides_extended_algorithm.html", form=myForm, occured_errors = errors_string))
+            response = make_response(render_template("euklides_extended_algorithm.html", form=myForm, occured_errors = errors_string))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
 
     def rozszerzony_euklides(self, input_a, input_b):
         a = input_a

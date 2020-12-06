@@ -9,7 +9,10 @@ class Factorization(Resource):
 
     def get(self):
         myForm = FactorizationForm()
-        return make_response(render_template("factorization.html", form=myForm))
+        response = make_response(render_template("factorization.html", form=myForm))
+        response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+        response.headers['Cache-Control'] = 'public, max-age=0'
+        return response
 
     def post(self):
         myForm = FactorizationForm(request.form)
@@ -32,14 +35,20 @@ class Factorization(Resource):
             else:
                 result_string = "Liczby " + liczba.__str__() + " nie da się rozłożyć na czynniki pierwsze ponieważ liczba " + liczba.__str__() + " jest to liczba pierwsza."
 
-            return make_response(render_template("factorization.html", form=myForm, data=result_string, liczba=liczba))
+            response = make_response(render_template("factorization.html", data=result_string, liczba=liczba))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
         else:
             print(myForm.errors)
             for key in myForm.errors:
                 for value in myForm.errors[key]:
                     errors_string += "<li>" + key + ":  " + value + "</li>"
 
-            return make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
+            response = make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
 
     def factorization(self, n):
         array_of_factors = []

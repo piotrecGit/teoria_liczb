@@ -12,7 +12,10 @@ class FermatTest(Resource):
     def get(self):
 
         myForm = FermatTestForm()
-        return make_response(render_template("fermat_test.html", form=myForm))
+        response = make_response(render_template("fermat_test.html", form=myForm))
+        response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+        response.headers['Cache-Control'] = 'public, max-age=0'
+        return response
 
     def post(self):
 
@@ -26,14 +29,20 @@ class FermatTest(Resource):
             fermat_result = self.fermat_prime_test(liczba, dokladnosc)
             computation_time = (time.time() - start_time)
             fermat_result += "<br>Czas wykonywania obliczeń wyniósł: " + computation_time.__str__() + " sekundy"
-            return make_response(render_template("fermat_test.html", form=myForm, data = fermat_result))
+            response = make_response(render_template("fermat_test.html", form=myForm, data = fermat_result))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
         else:
             print(myForm.errors)
             for key in myForm.errors:
                 for value in myForm.errors[key]:
                     errors_string += "<li>" + key + ":  " + value + "</li>"
 
-            return make_response(render_template("fermat_test.html", form=myForm, occured_errors=errors_string))
+            response = make_response(render_template("fermat_test.html", form=myForm, occured_errors=errors_string))
+            response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+            response.headers['Cache-Control'] = 'public, max-age=0'
+            return response
 
     def fermat_prime_test(self, p, k):
         result_string = ""

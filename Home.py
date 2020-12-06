@@ -5,7 +5,10 @@ from flask_restful import Resource
 class Home(Resource):
 
     def get(self):
-        headers = {'Content-Type': 'text/html'}
+        response = make_response(render_template(render_template("home.html")))
+        response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+        response.headers['Cache-Control'] = 'public, max-age=0'
+        return response
         return make_response(render_template("home.html"))
 
 
