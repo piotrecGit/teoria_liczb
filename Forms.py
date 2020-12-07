@@ -16,7 +16,7 @@ class PrimesForm(FlaskForm):
 
 
 class FactorizationForm(FlaskForm):
-    liczba = IntegerField('Liczba:', [NumberRange(min=2, max=2000099990, message='Liczba musi być większa od 1 i mniejsza od 2000099991')])
+    liczba = IntegerField('Liczba:', [NumberRange(min=2)])
     submit = SubmitField('Rozłóż na czynniki pierwsze')
 
 
