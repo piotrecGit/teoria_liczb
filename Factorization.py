@@ -22,11 +22,11 @@ class Factorization(Resource):
         if myForm.validate():
             liczba = int(request.form['liczba'])
             prime = PrimeNumbers
-            if not prime.if_prime(self, liczba):
-                start_time = time.time()
-                # print(type(self.factorization(liczba)))
-                result = self.factorization(liczba)
-                computation_time = (time.time() - start_time)
+            start_time = time.time()
+            result = self.factorization(liczba)
+            computation_time = (time.time() - start_time)
+            if result[0] != liczba:
+
                 if len(result) > 1:
                     result_string = liczba.__str__() + " = "
                     for i in result:
