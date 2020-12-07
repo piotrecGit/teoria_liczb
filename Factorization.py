@@ -3,6 +3,7 @@ from flask import render_template, make_response, request
 from flask_restful import Resource
 from Forms import FactorizationForm
 from PrimeNumbers import PrimeNumbers
+from sympy.ntheory import factorint
 
 
 class Factorization(Resource):
@@ -44,15 +45,28 @@ class Factorization(Resource):
 
             return make_response(render_template("factorization.html", form=myForm, occured_errors = errors_string))
 
+
     def factorization(self, n):
-        array_of_factors = []
-        while n > 1:
-            for i in range(2, int(n) + 1):
-                if n % i == 0:
-                    n /= i
-                    array_of_factors.append(i)
-                    break
-        return array_of_factors
+
+        factors_dict = factorint(n)
+        factors = []
+        for i in factors_dict:
+            for j in range(1, factors_dict[i] + 1):
+                factors.append(i)
+        return factors
+
+
+
+
+    # def factorization(self, n):1
+    #     array_of_factors = []
+    #     while n > 1:
+    #         for i in range(2, int(n) + 1):
+    #             if n % i == 0:
+    #                 n /= i
+    #                 array_of_factors.append(i)
+    #                 break
+    #     return array_of_factors
 
     # def fermat(self, p, factors):
     #     p = int(p)
