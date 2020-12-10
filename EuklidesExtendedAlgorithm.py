@@ -80,6 +80,7 @@ class EuklidesExtendedAlgorithm(Resource):
         items.append(an_item)
         if an_item['pa'] < 0:
             an_item['pa'] = an_item['pa'] + input_b
+            pa = pa + input_b
         return {
                 "items":items,
                 "a": abs(a),

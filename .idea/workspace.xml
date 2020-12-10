@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="prime numbers upgraded minor correction in front">
-      <change afterPath="$PROJECT_DIR$/templates/rsa_keys_pair_generate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="RSA Generating added">
       <change beforePath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/EuklidesExtendedAlgorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EulerFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/EulerFunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FermatTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/FermatTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimeNumbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrimeNumbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RSAKeysPairGenerate.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSAKeysPairGenerate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/prime_numbers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prime_numbers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +121,7 @@
       <workItem from="1607037263644" duration="16527000" />
       <workItem from="1607086335078" duration="89580000" />
       <workItem from="1607258457978" duration="14363000" />
-      <workItem from="1607529518392" duration="32527000" />
+      <workItem from="1607529518392" duration="32940000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -384,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607305712957</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="RSA Generating added">
+      <created>1607563152629</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1607563152629</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +407,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="api classes skeleton created" />
     <MESSAGE value="bad name of class corrected" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="many changes" />
@@ -434,7 +431,8 @@
     <MESSAGE value="factorization upgraded" />
     <MESSAGE value="prime numbers upgraded" />
     <MESSAGE value="prime numbers upgraded minor correction in front" />
-    <option name="LAST_COMMIT_MESSAGE" value="prime numbers upgraded minor correction in front" />
+    <MESSAGE value="RSA Generating added" />
+    <option name="LAST_COMMIT_MESSAGE" value="RSA Generating added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607562435057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
