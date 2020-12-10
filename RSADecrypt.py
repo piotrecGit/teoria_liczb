@@ -24,7 +24,18 @@ class RSADecrypt(Resource):
             start_time = time.time()
             result = pow(C, d, n)
             M_bytes = result.to_bytes(length=result.__sizeof__(), byteorder="little", signed=False)
-            M = M_bytes.decode("utf-8")
+            M = ""
+
+            try:
+                M = M_bytes.decode("utf-8")
+
+            except:
+
+                response = make_response(render_template("rsa_decrypt.html", form=myForm, occured_errors="Odszyfrowywanie nie powiodło się. Użyto nieprawidłowego szyfrogramu, klucza prywatnego lub modułu."))
+                response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+                response.headers['Cache-Control'] = 'public, max-age=0'
+                return response
+
             result_string = "Dla szyfrogramu <strong>C</strong>:<br><br>" + C.__str__() +\
                             "<br><br>odszyfrowanego kluczem prywatnym <strong>k(d, n)</strong>:<br><br>" + \
                              "<strong>d=</strong><br>" + d.__str__() + "<br><br><strong>n</strong>=<br>" + n.__str__() + \

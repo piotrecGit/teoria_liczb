@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="config.ini added">
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config.py" afterDir="false" />
+    <list default="true" id="7c1b98bc-6d47-4859-846a-a44f9b8da13e" name="Default Changelist" comment="config class changed">
+      <change beforePath="$PROJECT_DIR$/RSADecrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/RSADecrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <workItem from="1607258457978" duration="14363000" />
       <workItem from="1607529518392" duration="46988000" />
       <workItem from="1607633419027" duration="9000" />
-      <workItem from="1607633945469" duration="1532000" />
+      <workItem from="1607633945469" duration="3098000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1607038881929</created>
@@ -413,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607634114422</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="config class changed">
+      <created>1607638259937</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1607638259937</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +446,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug mode on" />
     <MESSAGE value="debug mode off" />
     <MESSAGE value="style change" />
     <MESSAGE value="prime numbers added" />
@@ -463,10 +470,11 @@
     <MESSAGE value="RSA Encrypt added" />
     <MESSAGE value="RSA Decrypt added" />
     <MESSAGE value="config.ini added" />
-    <option name="LAST_COMMIT_MESSAGE" value="config.ini added" />
+    <MESSAGE value="config class changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="config class changed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607631473012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/teoria_liczb$APIMain.coverage" NAME="APIMain Coverage Results" MODIFIED="1607639130617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$main.coverage" NAME="main Coverage Results" MODIFIED="1607039219253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/teoria_liczb$numbersTheoryApi.coverage" NAME="APIMain Coverage Results" MODIFIED="1607086027975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
