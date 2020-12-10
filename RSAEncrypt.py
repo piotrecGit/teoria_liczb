@@ -17,15 +17,17 @@ class RSAEncrypt(Resource):
         errors_string = ""
 
         if myForm.validate():
-            M = int(request.form['M'])
+            M_string = request.form['M']
+            M_bytes = bytes(M_string, "utf-8")
+            M = int.from_bytes(M_bytes, byteorder="little", signed=False)
             e = int(request.form['e'])
             n = int(request.form['n'])
             start_time = time.time()
-            result = pow(e, M, n)
+            result = pow(M, e, n)
             result_string = "Dla wiadomości <strong>M</strong>:<br><br>" + M.__str__() +\
-                            "<br><br>zaszyfrowanej kluczem publicznym <strong>k(e, n)</strong>:<br><br>" + \
+                            "<br><br>słownie: (" + M_string + ")<br><br>zaszyfrowanej kluczem publicznym <strong>k(e, n)</strong>:<br><br>" + \
                              "<strong>e=</strong><br>" + e.__str__() + "<br><br><strong>n</strong>=<br>" + n.__str__() + \
-                            ")<br><br>szyfrogram <strong>C =</strong><br>" + result.__str__() + "<br><br>"
+                            "<br><br>szyfrogram <strong>C =</strong><br>" + result.__str__() + "<br><br>"
 
             computation_time = (time.time() - start_time)
             result_string += "<br>Czas wykonywania obliczeń wyniósł: " + round(computation_time, 6).__str__() + " sekundy"

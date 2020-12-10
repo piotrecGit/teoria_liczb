@@ -6,10 +6,10 @@
 
   {% include "_homepage_link.html"%}
 
-  <h2 class="title">Szyfrowanie asymetryczne RSA</h2>
+  <h2 class="title">Deszyfrowanie asymetryczne RSA</h2>
     <br>
     <div style="text-align: center;">
-        Program utworzy szyfrogram RSA
+        Program odszyfruje szfrogram RSA
         <br>
         <br>
     </div>
@@ -17,14 +17,14 @@
   <form style="width: 50%;margin-left: auto; margin-right: auto;" method="POST">
       {{ form.csrf_token }}
       <div class="form-group">
-          {{ form.M.label }}
-          {{ form.M(class="form-control") }}
+          {{ form.C.label }}
+          {{ form.C(class="form-control") }}
 
       </div>
       <br>
       <div class="form-group">
-          {{ form.e.label }}
-          {{ form.e(class="form-control") }}
+          {{ form.d.label }}
+          {{ form.d(class="form-control") }}
 
       </div>
       <br>

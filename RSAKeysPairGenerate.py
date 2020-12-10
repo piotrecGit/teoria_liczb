@@ -68,7 +68,7 @@ class RSAKeysPairGenerate(Resource):
             number_inverse = euklides_result_inverse
 
             result_string += "Wylosowana liczba <strong>e (klucz publiczny - wykładnik publiczny e):</strong><br><br>" + number_e.__str__() + "<br><br>"
-            result_string += "Odwrotność liczby <strong>e mod φ(n) (klucz prywatny - wykładnik prywatny dK):</strong><br><br>" + number_inverse.__str__() + "<br><br>"
+            result_string += "Odwrotność liczby <strong>e mod φ(n) (klucz prywatny - wykładnik prywatny d):</strong><br><br>" + number_inverse.__str__() + "<br><br>"
 
             nwd_e_and_euler = 1
 

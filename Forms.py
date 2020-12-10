@@ -33,13 +33,20 @@ class EulerFunctionForm(FlaskForm):
 
 class RSAKeysPairGenerateForm(FlaskForm):
     key_lenght = SelectField('Długość klucza:', default=768, choices=[(768, '768-bit'), (1024, '1024-bit')], validate_choice=True, coerce=int)
-    submit = SubmitField('Oblicz')
+    submit = SubmitField('Generuj')
 
 
 class RSAEncryptForm(FlaskForm):
     M = StringField('M - wiadomość:')
     e = IntegerField('e - publiczny wykładnik:')
     n = IntegerField('n - moduł:')
-    submit = SubmitField('Oblicz')
+    submit = SubmitField('Zaszyfruj')
+
+
+class RSADecryptForm(FlaskForm):
+    C = IntegerField('C - szyfrogram:')
+    d = IntegerField('d - prywatny wykładnik:')
+    n = IntegerField('n - moduł:')
+    submit = SubmitField('Odszyfruj')
 
 
