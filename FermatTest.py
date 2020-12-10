@@ -47,7 +47,7 @@ class FermatTest(Resource):
     def fermat_prime_test(self, p, k):
         result_string = ""
         for i in range(1, k+1):
-            a = self.losowanie(p)
+            a = self.losowanie(2, p)
             test_result = pow(a, p - 1, p)
             result_string += ("<br><strong>Krok " + i.__str__() + ":</strong><br>" + "wylosowano a = " + a.__str__() + "<br>a^(p-1) mod p = " + a.__str__() +
                   "^" + (p-1).__str__() +" mod " + p.__str__() + " = " + test_result.__str__() + "<br>")
@@ -58,8 +58,8 @@ class FermatTest(Resource):
         result_string = "Liczba p = <strong>" + p.__str__() + "</strong> jest prawdopodobnie pierwsza<br><br>" + result_string
         return result_string
 
-    def losowanie(self, liczba):
-        randomized = random.randrange(2, liczba-1, 1)
+    def losowanie(self, od, do):
+        randomized = random.randrange(od, do-1, 1)
         return randomized
 
 

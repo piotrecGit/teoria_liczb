@@ -1,5 +1,5 @@
-from flask_wtf import FlaskForm, RecaptchaField
-from wtforms import IntegerField, SubmitField
+from flask_wtf import FlaskForm
+from wtforms import IntegerField, SubmitField, SelectField
 from wtforms.validators import *
 
 
@@ -28,6 +28,11 @@ class FermatTestForm(FlaskForm):
 
 class EulerFunctionForm(FlaskForm):
     liczba = IntegerField('Liczba:', [NumberRange(min=2, message='Liczba musi być większa od 1')])
+    submit = SubmitField('Oblicz')
+
+
+class RSAKeysPairGenerateForm(FlaskForm):
+    key_lenght = SelectField('Długość klucza:', default=768, choices=[(768, '768-bit'), (1024, '1024-bit')], validate_choice=True, coerce=int)
     submit = SubmitField('Oblicz')
 
 

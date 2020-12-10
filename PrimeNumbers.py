@@ -26,7 +26,8 @@ class PrimeNumbers(Resource):
             start_time = time.time()
             result = self.prime_numbers(a, b)
             computation_time = (time.time() - start_time)
-
+            if len(result) == 0:
+                result = "Nie znaleziono liczb pierwszych w podanym zakresie.<br>"
             return make_response(render_template("prime_numbers.html", form=myForm, data=result, exchange=exchange, computation_time=round(computation_time, 6)))
         else:
             print(myForm.errors)
@@ -38,7 +39,7 @@ class PrimeNumbers(Resource):
 
     def prime_numbers(self, input_a, input_b):
 
-        prime_numbers_arr = [i for i in primerange(input_a, input_b)]
+        prime_numbers_arr = [i for i in primerange(input_a, input_b+1)]
 
         # current_number = input_a
         # prime_numbers_arr = []
@@ -52,7 +53,7 @@ class PrimeNumbers(Resource):
     def if_prime(self, number):
 
         check_result = [i for i in primerange(number, number + 1)]
-        return number == check_result[0]
+        return len(check_result) == 1
 
         # found = False
         # for i in range(2, floor(sqrt(number))+1):

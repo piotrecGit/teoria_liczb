@@ -48,8 +48,8 @@ class EuklidesExtendedAlgorithm(Resource):
             return response
 
     def rozszerzony_euklides(self, input_a, input_b):
-        a = input_a
-        b = input_b
+        a = int(input_a)
+        b = int(input_b)
         # assert a != 0, "Liczba a nie może być zerem."
         assert b != 0, "Liczba b nie może być zerem."
         pa = 1
@@ -78,12 +78,13 @@ class EuklidesExtendedAlgorithm(Resource):
 
         an_item = dict(counter="Na wyjściu", a=a, b=b, pa=pa, old_pa=old_pa, qa=qa, old_qa=old_qa, pb=pb, qb=qb)
         items.append(an_item)
-
+        if an_item['pa'] < 0:
+            an_item['pa'] = an_item['pa'] + input_b
         return {
                 "items":items,
                 "a": abs(a),
                 "sign": pa,
-                "pa": pa if pa >= 0 else pa + input_b,
+                "pa": pa,
                 "qa": qa,
                 "input_a": input_a,
                 "input_b": input_b
