@@ -36,7 +36,7 @@ class RSAKeysPairGenerate(Resource):
             number_n = number_p * number_q
             result_string = "Wylosowana liczba pierwsza <strong>p</strong>:<br><br>" + number_p.__str__() + "<br><br>Wylosowana liczba pierwsza <strong>q</strong>:<br><br>" + number_q.__str__() + "<br><br>"
 
-            result_string += "Liczba <strong>n = p * q (klucz publiczny - część n):</strong><br><br>" + (number_n).__str__() + "<br><br>"
+            result_string += "Liczba <strong>n = p * q (klucz publiczny - moduł n):</strong><br><br>" + (number_n).__str__() + "<br><br>"
 
             euler_p = euler.euler(self, number_p)[1]
             euler_q = euler.euler(self, number_q)[1]
@@ -67,8 +67,8 @@ class RSAKeysPairGenerate(Resource):
 
             number_inverse = euklides_result_inverse
 
-            result_string += "Wylosowana liczba <strong>e (klucz publiczny - część e):</strong><br><br>" + number_e.__str__() + "<br><br>"
-            result_string += "Odwrotność liczby <strong>e mod φ(n) (klucz prywatny):</strong><br><br>" + number_inverse.__str__() + "<br><br>"
+            result_string += "Wylosowana liczba <strong>e (klucz publiczny - wykładnik publiczny e):</strong><br><br>" + number_e.__str__() + "<br><br>"
+            result_string += "Odwrotność liczby <strong>e mod φ(n) (klucz prywatny - wykładnik prywatny dK):</strong><br><br>" + number_inverse.__str__() + "<br><br>"
 
             nwd_e_and_euler = 1
 
@@ -123,5 +123,4 @@ class RSAKeysPairGenerate(Resource):
         while number < 0:
             number = random.getrandbits(bits)
 
-        print(number)
-        return  number
+        return number
